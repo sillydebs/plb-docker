@@ -63,6 +63,7 @@ Au lancement de install.sh, vous devrez interagir depuis votre terminal pour par
 
 Voici les informations à entrer* :
  **Si vous ne voyez pas un champ dans cette liste, appuyez sur Entrée, cela entrera la valeur par défaut.*
+ 
 	- DB HOST : le domaine de la base de données
 		- si vous voulez utiliser votre propre base de données, entrez votre domaine
 		- si vous n'avez pas de base de données, entrez mariadb.plb
