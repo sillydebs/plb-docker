@@ -24,24 +24,33 @@ git clone https://github.com/PlanningBiblio/PlanningBiblio.git
  ```
 
 ### 2. Vérifiez que les fichiers et répertoires suivants sont présents à la racine de votre projet
-	- [ ] le répertoire docker/
-	- [ ] les fichiers
-		- [ ] docker-compose.yml
-		- [ ] Dockerfile-php
-		- [ ] makefile
 
-Si les fichiers ne sont pas présents dans votre répertoire, il suffira de les copier avec la commande cp : *cp chemin_d'origine_du_fichier/nom_du_fichier chemin_vers_le_projet/nom_du_fichier*
+- [ ] le répertoire docker/
+- [ ] les fichiers
+	- [ ] docker-compose.yml
+	- [ ] Dockerfile-php
+	- [ ] makefile
 
-Exemple :
+Pour vérifier leur présence, entrez la commande ls
+ ```bash
+ votresession@votremachine:~/PlanningBiblio$ ls
+ ```
+
+Si les fichiers ne sont pas présents dans votre répertoire, il suffira de les importer depuis ce git, puis de les déplacer avec la commande mv. On finira par la suppression du répertoire plb-docker une fois vidé.
 
 ```bash
-cp ~/Downloads/makefile ~/PlanningBiblio/makefile
+votresession@votremachine:~/PlanningBiblio$ git clone https://github.com/sillydebs/plb-docker.git
+votresession@votremachine:~/PlanningBiblio$ mv plb-docker/makefile ../makefile
+votresession@votremachine:~/PlanningBiblio$ mv plb-docker/Dockerfile-php ../Dockerfile-php
+votresession@votremachine:~/PlanningBiblio$ mv plb-docker/docker-compose.yml ../docker-compose.yml
+votresession@votremachine:~/PlanningBiblio$ mv plb-docker/docker ./docker
+votresession@votremachine:~/PlanningBiblio$ rm -rf plb-docker
 ```
 
 ### 3. Depuis la racine de votre projet, lancez make depuis votre terminal
 
 ```bash
-make
+votresession@votremachine:~/PlanningBiblio$ make
 ```
 
 Le fichier makefile contient toutes les instructions nécessaires pour installer l'image Docker dont vous aurez besoin en local.
