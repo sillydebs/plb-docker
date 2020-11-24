@@ -39,12 +39,12 @@ Pour vérifier leur présence, entrez la commande ls
 Si les fichiers ne sont pas présents dans votre répertoire, il suffira de les importer depuis ce git, puis de les déplacer avec la commande mv. On finira par la suppression du répertoire plb-docker une fois vidé.
 
 ```bash
-votresession@votremachine:~/PlanningBiblio$ git clone https://github.com/sillydebs/plb-docker.git
-votresession@votremachine:~/PlanningBiblio$ mv plb-docker/makefile ../makefile
-votresession@votremachine:~/PlanningBiblio$ mv plb-docker/Dockerfile-php ../Dockerfile-php
-votresession@votremachine:~/PlanningBiblio$ mv plb-docker/docker-compose.yml ../docker-compose.yml
-votresession@votremachine:~/PlanningBiblio$ mv plb-docker/docker ./docker
-votresession@votremachine:~/PlanningBiblio$ rm -rf plb-docker
+git clone https://github.com/sillydebs/plb-docker.git
+mv plb-docker/makefile ./makefile
+mv plb-docker/Dockerfile-php ./Dockerfile-php
+mv plb-docker/docker-compose.yml ./docker-compose.yml
+mv plb-docker/docker ./docker
+rm -rf plb-docker
 ```
 
 ### 3. Depuis la racine de votre projet, lancez make depuis votre terminal
